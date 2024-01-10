@@ -16,6 +16,7 @@ export default function Navigation() {
         name="Favorite1"
         component={FavoriteNavigation}
         options={{
+          // title: " ",
           tabBarLabel: "Favoritos",
           tabBarIcon: ({ color, size }) => (
             <Icon name="heart" color={color} size={size} />
@@ -26,6 +27,7 @@ export default function Navigation() {
         name="Pokede209"
         component={PokedexNavigation}
         options={{
+          title: " ",
           tabBarLabel: "",
           tabBarIcon: () => renderPokeball(),
         }}
