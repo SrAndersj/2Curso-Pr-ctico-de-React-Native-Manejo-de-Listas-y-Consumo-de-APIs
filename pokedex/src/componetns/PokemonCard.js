@@ -17,13 +17,13 @@ export default function PokemonCard(props) {
   // console.log(pokemon.type);
 
   const pokemonColor = getColorByPokemonType(pokemon.type);
-  console.log(pokemonColor);
+  // console.log(pokemonColor);
 
   const bgStyles = { backgroundColor: pokemonColor, ...styles.bgStyles };
 
   const goToPokemon = () => {
-    console.log(`vamos al pokemon : ${pokemon.name}`);
-    console.log(pokemon);
+    // console.log(`vamos al pokemon : ${pokemon.name}`);
+    // console.log(pokemon);
   };
 
   return (
