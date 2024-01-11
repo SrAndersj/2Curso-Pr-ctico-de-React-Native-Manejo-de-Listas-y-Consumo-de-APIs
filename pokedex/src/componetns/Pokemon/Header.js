@@ -5,11 +5,11 @@ import getColorByPokemonType from "../../utils/getColorByPokemonType";
 
 export default function Header(props) {
   const { type, name, order, image } = props;
-  const color = getColorByPokemonType(type);
+  const color = getColorByPokemonType(type[0].type.name);
   const bgStyle = [{ backgroundColor: color, ...styles.bg }];
 
   //depura
-  console.log(type);
+  // console.log(type[0].type.name);
 
   return (
     <>
@@ -50,12 +50,12 @@ const styles = StyleSheet.create({
     paddingTop: 40,
   },
   name: {
-    // color: "#fff",
+    color: "#fff",
     fontWeight: "bold",
     fontSize: 27,
   },
   order: {
-    // color: "#fff",
+    color: "#fff",
     fontWeight: "bold",
   },
 

@@ -4,6 +4,8 @@ import { getPokemonDetailsApi } from "../api/pokemon";
 
 import Header from "../componetns/Pokemon/Header";
 
+import Type from "../componetns/Pokemon/Type";
+
 export default function Pokemon(props) {
   const {
     navigation,
@@ -27,10 +29,13 @@ export default function Pokemon(props) {
   return (
     <ScrollView>
       <Header
+        type={pokemon.types}
         name={pokemon.name}
         order={pokemon.order}
         image={pokemon.sprites.other["official-artwork"].front_default}
       />
+
+      <Type types={pokemon.types} />
     </ScrollView>
   );
 }
