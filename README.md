@@ -1,5 +1,7 @@
-# Consumo de APIs con fetch: PokeApi
+# instalamos
 
-vamos a hacer una peticion https
+```bash
 
-## https://pokeapi.co/
+yarn add lodash
+
+```
