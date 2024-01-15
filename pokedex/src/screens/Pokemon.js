@@ -1,3 +1,4 @@
+import Icon from "react-native-vector-icons/FontAwesome5";
 import React, { useState, useEffect } from "react";
 import { ScrollView } from "react-native";
 import { getPokemonDetailsApi } from "../api/pokemon";
@@ -12,6 +13,23 @@ export default function Pokemon(props) {
     route: { params },
   } = props;
   const [pokemon, setPokemon] = useState(null);
+
+  useEffect(() => {
+    navigation.setOptions({
+      headerRight: () => null,
+
+      headerLeft: () => (
+        <Icon
+          name={"arrow-left"}
+          color={"#fff"}
+          size={20}
+          style={{ marginLeft: 20 }}
+          // onPress={() => console.log("Ir atras ")}
+          onPress={navigation.goBack}
+        />
+      ),
+    });
+  }, [navigation, params]); // cada vez que cambie de navigations o params se vuelve a ejecutar
 
   useEffect(() => {
     (async () => {
